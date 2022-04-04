@@ -12,9 +12,10 @@ function pluginSVGInject() {
         return null;
       }
 
-      const resolvedPath = nodePath.join(nodePath.dirname(importer), path).replace(/\.svg$/, '.svg.tsx');
+      const resolvedPath = nodePath.join(nodePath.dirname(importer), path);
+      const svgPath = resolvedPath.replace(/\.svg$/, '.svg.tsx');
 
-      return resolvedPath;
+      return svgPath;
     },
 
     async load(path: string) {

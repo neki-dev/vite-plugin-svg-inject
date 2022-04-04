@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-svg-inject",
   "description": "Inject SVG content into components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "vite",
     "svg",
@@ -30,6 +30,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neki-dev/alias-reuse.git"
+    "url": "git+https://github.com/neki-dev/vite-plugin-svg-inject.git"
   }
 }
