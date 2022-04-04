@@ -12,7 +12,7 @@ Inject SVG content into components
 npm i vite-plugin-svg-inject --save-dev
 ```
 
-* ### Usage
+* ### Configure
 
 ```js
 import { defineConfig } from "vite";
@@ -23,4 +23,18 @@ export default defineConfig({
     SVGInjectPlugin(),
   ],
 })
+```
+
+* ### Example
+
+```js
+import MyIcon from './images/icon.svg';
+
+function MyComponent() {
+  return (
+    <div>
+      <MyIcon width="32" fill="red" />
+    </div>
+  );
+}
 ```
