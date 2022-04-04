@@ -1,0 +1,35 @@
+{
+  "name": "vite-plugin-svg-inject",
+  "description": "Inject SVG content into components",
+  "version": "1.0.0",
+  "keywords": [
+    "vite",
+    "svg",
+    "inject",
+    "icon",
+    "solid"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Nikita Galadiy",
+    "email": "dev@neki.guru",
+    "url": "https://neki.guru/"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "lint": "eslint ./src --fix",
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "@neki-dev/eslint-config": "github:neki-dev/eslint-config",
+    "@types/node": "^17.0.23",
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "typescript": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neki-dev/alias-reuse.git"
+  }
+}
