@@ -1,23 +1,25 @@
 import nodePath from 'path';
 import { readFile } from 'fs/promises';
 
+const isSVGPath = (path: string) => /\.svg(\.tsx)?$/.test(path);
+
 function pluginSVGInject() {
   return {
     enforce: 'pre',
     name: 'svg-inject',
     resolveId(path: string, importer: string) {
-      if (!path.endsWith('.svg')) {
+      if (!isSVGPath(path)) {
         return null;
       }
 
-      const resolvedPath = nodePath.join(nodePath.dirname(importer), path);
-      const svgPath = resolvedPath.replace(/\.svg$/, '.svg.tsx');
+      const svgPath = path.replace(/\.svg$/, '.svg.tsx');
+      const resolvedPath = nodePath.join(nodePath.dirname(importer), svgPath);
 
-      return svgPath;
+      return resolvedPath;
     },
 
     async load(path: string) {
-      if (!path.endsWith('.svg')) {
+      if (!isSVGPath(path)) {
         return null;
       }
 
