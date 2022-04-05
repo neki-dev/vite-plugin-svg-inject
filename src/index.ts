@@ -1,14 +1,12 @@
 import nodePath from 'path';
 import { readFile } from 'fs/promises';
 
-const isSVGPath = (path: string) => /\.svg(\.tsx)?$/.test(path);
-
 function pluginSVGInject() {
   return {
     enforce: 'pre',
     name: 'svg-inject',
     resolveId(path: string, importer: string) {
-      if (!isSVGPath(path)) {
+      if (!path.endsWith('.svg')) {
         return null;
       }
 
@@ -19,7 +17,7 @@ function pluginSVGInject() {
     },
 
     async load(path: string) {
-      if (!isSVGPath(path)) {
+      if (!path.endsWith('.svg')) {
         return null;
       }
 
