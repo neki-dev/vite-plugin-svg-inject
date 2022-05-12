@@ -1,5 +1,5 @@
-import nodePath from 'path';
-import { readFile } from 'fs/promises';
+const nodePath = require('path');
+const fs = require('fs/promises');
 
 const isSVGPath = (path) => /\.svg(\.tsx)?$/.test(path);
 
@@ -24,7 +24,8 @@ module.exports = function SVGInjectPlugin() {
       }
 
       const svgPath = path.replace(/\.svg\.tsx$/, '.svg');
-      const content = String(await readFile(svgPath));
+      const buffer = await fs.readFile(svgPath);
+      const content = String(buffer);
       const exportContent = `
         export default (props = {}) => 
           ${content.replace(/^(<svg.*?)>/i, '$1 {...props}>')}
