@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-svg-inject",
   "description": "Inject SVG content into components",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "vite",
     "svg",
