@@ -1,4 +1,0 @@
-"use strict";var __importDefault=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};const path_1=__importDefault(require("path")),promises_1=require("fs/promises"),isSVGPath=e=>/\.svg(\.tsx)?$/.test(e);function pluginSVGInject(){return{enforce:"pre",name:"svg-inject",resolveId(e,t){if(!isSVGPath(e))return null;e=e.replace(/\.svg$/,".svg.tsx");return path_1.default.join(path_1.default.dirname(t),e)},async load(e){if(!isSVGPath(e))return null;e=e.replace(/\.svg\.tsx$/,".svg");const t=String(await(0,promises_1.readFile)(e));return`
-        export default (props = {}) => 
-          ${t.replace(/^(<svg.*?)>/i,"$1 {...props}>")}
-      `}}}module.exports=pluginSVGInject;
