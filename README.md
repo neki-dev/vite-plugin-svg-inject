@@ -9,7 +9,7 @@ Inject SVG content into components
 * ### Install
 
 ```sh
-npm i vite-plugin-svg-inject --save-dev
+npm i vite-plugin-svg-inject -D
 ```
 
 * ### Configure

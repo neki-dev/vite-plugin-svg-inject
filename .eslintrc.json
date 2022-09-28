@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "@neki-dev/eslint-config"
-  ]
+  "extends": ["neki/js"]
 }

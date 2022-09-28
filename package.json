@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-svg-inject",
   "description": "Inject SVG content into components",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "keywords": [
     "vite",
     "svg",
@@ -15,12 +15,13 @@
     "email": "dev@neki.guru",
     "url": "https://neki.guru/"
   },
-  "main": "./index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "lint": "eslint ./index.js --fix"
+    "lint": "eslint \"src/**/*.js\" --fix"
   },
   "devDependencies": {
-    "@neki-dev/eslint-config": "github:neki-dev/eslint-config"
+    "eslint": "^8.24.0",
+    "eslint-config-neki": "^1.0.2"
   },
   "repository": {
     "type": "git",
