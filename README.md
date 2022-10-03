@@ -1,6 +1,6 @@
 ## Vite plugin SVG inject
 [![Npm package version](https://badgen.net/npm/v/vite-plugin-svg-inject)](https://npmjs.com/package/vite-plugin-svg-inject)
-[![Small size](https://badge-size.herokuapp.com/neki-dev/vite-plugin-svg-inject/master/index.js)](https://github.com/neki-dev/vite-plugin-svg-inject/blob/master/index.js)
+[![Small size](https://badge-size.herokuapp.com/neki-dev/vite-plugin-svg-inject/master/src/index.js)](https://github.com/neki-dev/vite-plugin-svg-inject/blob/master/src/index.js)
 
 Inject SVG content into components
 
