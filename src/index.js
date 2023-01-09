@@ -7,7 +7,7 @@ module.exports = function SVGInjectPlugin() {
   return {
     enforce: 'pre',
     name: 'svg-inject',
-    
+
     resolveId(path, importer) {
       if (!isSVGPath(path)) {
         return null;
