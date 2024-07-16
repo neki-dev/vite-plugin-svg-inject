@@ -3,7 +3,7 @@ const fs = require('fs/promises');
 
 const isSVGPath = (path) => /\.svg(\.tsx)?$/.test(path);
 
-module.exports = function SVGInjectPlugin() {
+module.exports = function SVGInjectPlugin(target) {
   return {
     enforce: 'pre',
     name: 'svg-inject',
@@ -24,10 +24,12 @@ module.exports = function SVGInjectPlugin() {
         return null;
       }
 
+      const isReact = target === 'react';
       const svgPath = path.replace(/\.svg\.tsx$/, '.svg');
       const buffer = await fs.readFile(svgPath);
       const content = String(buffer);
       const exportContent = `
+        ${isReact ? 'import React from "react";' : ''}
         export default (props = {}) => 
           ${content.replace(/^(<svg.*?)>/i, '$1 {...props}>')}
       `;

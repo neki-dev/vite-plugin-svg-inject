@@ -20,7 +20,10 @@ import SVGInjectPlugin from "vite-plugin-svg-inject";
 
 export default defineConfig({
   plugins: [
-    SVGInjectPlugin(),
+    // Target:
+    // - "react" - If JSX library is React
+    // - "other" (default) - For others libraries
+    SVGInjectPlugin(target)
   ],
 })
 ```
