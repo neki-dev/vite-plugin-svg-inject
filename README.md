@@ -1,3 +1,8 @@
+### ⛔ Package is deprecated
+Please, use [vite-plugin-svgr](https://www.npmjs.com/package/vite-plugin-svgr)
+
+.
+
 ## ⚙️ Vite plugin SVG inject
 [![Npm package version](https://badgen.net/npm/v/vite-plugin-svg-inject)](https://npmjs.com/package/vite-plugin-svg-inject)
 [![Small size](https://img.badgesize.io/neki-dev/vite-plugin-svg-inject/master/src/index.js)](https://github.com/neki-dev/vite-plugin-svg-inject/blob/master/src/index.js)
